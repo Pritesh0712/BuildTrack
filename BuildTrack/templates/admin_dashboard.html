@@ -1,0 +1,60 @@
+{% extends "index.html" %}
+{% block content %}
+
+<div class="container-fluid mt-4">
+  <div class="d-flex justify-content-between align-items-center mb-4">
+    <h2 class="text-primary fw-bold"> Admin Dashboard</h2>
+    <a href="{{ url_for('admin.admin_logout') }}" class="btn btn-danger">
+      <i class="fas fa-sign-out-alt"></i> Logout
+    </a>
+  </div>
+
+  <hr />
+
+  <div class="text-dark text-center">
+    <h2 class="text-primary fw-bold">Welcome Admin!</h2>
+    <a href="{{ url_for('admin.admin_change_password') }}" class="btn btn-outline-secondary mb-3">Change Password</a>
+  </div>
+
+
+  <!-- Quick Access Cards -->
+  <div class="row">
+    <div class="col-md-6 mb-4">
+      <a href="{{ url_for('admin.admin_users') }}" class="text-decoration-none">
+        <div class="card text-white bg-primary text-center p-4 shadow">
+          <i class="fas fa-users fa-2x mb-2"></i>
+          <h5>Manage Users</h5>
+        </div>
+      </a>
+    </div>
+
+    <div class="col-md-6 mb-4">
+      <a href="{{ url_for('admin.admin_projects') }}" class="text-decoration-none">
+        <div class="card text-white bg-success text-center p-4 shadow">
+          <i class="fas fa-project-diagram fa-2x mb-2"></i>
+          <h5>Manage Projects</h5>
+        </div>
+      </a>
+    </div>
+
+    <div class="col-md-6 mb-4">
+      <a href="{{ url_for('admin.admin_reports') }}" class="text-decoration-none">
+        <div class="card text-white bg-warning text-center p-4 shadow">
+          <i class="fas fa-file-alt fa-2x mb-2"></i>
+          <h5>View Reports</h5>
+        </div>
+      </a>
+    </div>
+
+    <div class="col-md-6 mb-4">
+      <a href="{{ url_for('admin.admin_contacts') }}" class="text-decoration-none">
+        <div class="card text-white bg-dark text-center p-4 shadow">
+          <i class="fas fa-envelope fa-2x mb-2"></i>
+          <h5>Contact Messages</h5>
+        </div>
+      </a>
+    </div>
+  </div>
+</div>
+
+{% endblock %}
