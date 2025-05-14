@@ -332,7 +332,6 @@ def admin_archive_project():
     project = Project.query.get(project_id)
 
     if project:
-        # Update project to archived status
         new_archive = Archive(
             project_id=project.id,
             project_location=project.project_location,
