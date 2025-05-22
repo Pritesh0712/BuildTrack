@@ -19,7 +19,8 @@ from dotenv import load_dotenv
 # Import the admin blueprint
 from admin_panel import admin_bp
 
-load_dotenv('settings.env')
+from pathlib import Path
+load_dotenv(dotenv_path=Path(__file__).parent / "settings.env")
 
 def create_app():
     app = Flask(__name__)
